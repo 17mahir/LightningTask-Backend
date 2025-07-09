@@ -1,40 +1,38 @@
-# ⚡ LightningTask — Frontend
+# ⚡ LightningTask — Backend
 
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
 
-> A modern, fast, and responsive **task management web app** built using React, Vite, and TypeScript.
+> Backend API for **LightningTask**, a modern task management tool — powered by Node.js, Express, Prisma ORM, and MongoDB Atlas.
 
 ---
 
 ## 🚀 Project Overview
 
-**LightningTask** is a sleek and efficient task management tool designed for productivity and collaboration. This repository contains the frontend codebase built with:
+This backend is the core engine of **LightningTask**, handling:
 
-- ⚛️ **React** – for building UI components
-- ⚡ **Vite** – for lightning-fast development and builds
-- 💅 **Custom CSS / TailwindCSS** – for styling (update based on your setup)
-- 🔐 **API Integration** – connected with a backend to manage users and tasks
-
----
-
-## 📸 Screenshots
-
-![Screenshot (14)](https://github.com/user-attachments/assets/4275a295-ea93-4005-a677-b4fc13028ff6)
-
+- 🔐 Authentication (users & admins)
+- 📋 Task CRUD operations
+- 👥 Sub-user & user management
+- 🗓️ task assignment logic
+- 🌐 REST API endpoints
 
 ---
 
-## 🛠️ Tech Stack
+## ⚙️ Tech Stack
 
-| Frontend       | Description                          |
-|----------------|--------------------------------------|
-| React + Vite   | Fast, modern frontend stack          |
-| TypeScript     | Safer, typed JavaScript              |
-| Tailwind CSS   | Custom and utility styling           |
-| Axios          | API communication with backend       |
-| React Router   | Page navigation                      |
+| Tech         | Purpose                              |
+|--------------|--------------------------------------|
+| Node.js      | Runtime for JavaScript server-side   |
+| Express.js   | Web server & routing                 |
+| Prisma ORM   | Type-safe DB interaction with MongoDB |
+| MongoDB Atlas| Cloud-based NoSQL database           |
+| JWT / Bcrypt | Authentication & security            |
+| CORS         | Middleware for security and headers  |
+| dotenv       | Manage environment variables         |
+
 
 ---
 
@@ -42,11 +40,18 @@
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/17mahir/LightningTask-Frontend.git
-cd LightningTask-Frontend
+git clone https://github.com/17mahir/LightningTask-Backend.git
+cd LightningTask-Backend
 
 # 2. Install dependencies
 npm install
 
-# 3. Start development server
-npm run dev
+# 3. Setup .env file (see below)
+
+# 4. Push Prisma schema (optional if already in DB)
+npx prisma db push
+
+# 5. Start the server
+npm start
+
+
